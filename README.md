@@ -15,3 +15,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Mongodb
 
 This Blog uses Mongodb to store contacts. You need to add relevant details in the db-util file
+
+## config file
+
+Add a new file with the name next.config.file
+
+    module.exports = {
+        env: {
+            mongodb_username: '',
+            mongodb_password: '',
+            mongodb_db: 'test'
+        }
+    }

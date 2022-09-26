@@ -1,12 +1,16 @@
 import { MongoClient } from 'mongodb'
 
-const DB_URL = 'mongodb+srv://test:gID52h2HpERyAizf@cluster0.jrdex.mongodb.net/?retryWrites=true&w=majority'
+const DB_USERNAME = process.env.mongodb_username
+const DB_PASSWORD = process.env.mongodb_password
+const DB_NAME = process.env.mongodb_db
+
+const DB_URL = `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@cluster0.jrdex.mongodb.net/?retryWrites=true&w=majority`
 
 const client = new MongoClient(DB_URL);
 
 async function initDb() {
   try {
-    const database = client.db('test');
+    const database = client.db(DB_NAME);
     return database.collection('contacts');
   } catch(e) {
     console.log('Error occured ', e)
