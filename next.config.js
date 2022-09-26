@@ -1,7 +1,7 @@
 module.exports = {
     env: {
-        mongodb_username: 'test',
-        mongodb_password: 'VdYqaKtletSrKG2h',
+        mongodb_username: '',
+        mongodb_password: '',
         mongodb_db: 'test'
     }
 }
